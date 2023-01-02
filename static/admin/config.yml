@@ -80,3 +80,23 @@ collections:
           summary: '{{fields.image}}',
           field: { label: 'Image', name: 'image', widget: 'image' },
         }
+  - name: 'changelogs'
+    label: 'Change logs'
+    label_singular: 'Change log'
+    folder: 'content/changelogs'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    preview_path: 'changelogs/{{slug}}'
+    fields:
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          default: 'animals',
+          options: [{ label: 'Bug', value: 'bug' }, { label: 'Feature', value: 'feature' }],
+        }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+
+
