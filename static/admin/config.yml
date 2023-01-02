@@ -90,12 +90,19 @@ collections:
     preview_path: 'changelogs/{{slug}}'
     fields:
       - {
-          label: 'Category',
-          name: 'category',
+          label: 'Type',
+          name: 'type',
           widget: 'select',
-          default: 'animals',
+          default: 'feature',
           options: [{ label: 'Bug', value: 'bug' }, { label: 'Feature', value: 'feature' }],
         }
+      - {
+        label: 'Component',
+        name: 'component',
+        widget: 'select',
+        default: 'feature',
+        options: [ { label: 'User Interface', value: 'userinterface' }, { label: 'Interfaces', value: 'interfaces' } ],
+      }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
 
